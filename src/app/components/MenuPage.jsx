@@ -11,7 +11,7 @@ export function MenuPage() {
   );
 
   return (
-    <div className="flex flex-col min-h-screen bg-amber-50 scroll-pt-[80px]">
+    <div className="flex flex-col min-h-screen bg-amber-50 sm:scroll-pt-[80px] scroll-pt-[100px]">
       <MenuHeader cafeName="Café Hola" />
       <main className="flex-1 container mx-auto px-1 pb-20">
         <MenuCategories
