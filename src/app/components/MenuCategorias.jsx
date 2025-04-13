@@ -10,8 +10,8 @@ export function MenuCategories({ categories, activeCategory, setActiveCategory }
         <div className="flex space-x-2 pb-2">
 
           {categories.map((category) => (
+        
         <a href={`#${category.name}`}>
-
             <Button
               key={category.id}
               variant={activeCategory === category.id ? "default" : "outline"}
