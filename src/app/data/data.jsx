@@ -1,6 +1,5 @@
 export const menuData = {
     categories: [
-      { id : "all", name: "Todo" },
       { id: "coffee", name: "Cafés" },
       { id: "pizza", name: "Pizzas" },
       { id: "cocktails", name: "Cócteles" },

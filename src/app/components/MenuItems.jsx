@@ -9,7 +9,7 @@ export function MenuItems({ items   , categories}) {
 
 
   return (
-    <div className="flex flex-col gap-4 py-4 px-2 h-[700px] overflow-auto translate-y-2.5 no-scrollbar ">
+    <div className="flex flex-col items-center gap-4 py-4 px-2 h-[700px] overflow-auto translate-y-2.5 no-scrollbar ">
       {items.map((item, index) => {
 
         let divisor =null;
@@ -33,7 +33,7 @@ export function MenuItems({ items   , categories}) {
           <div key={item.id}>
             
             {divisor}
-          <Card  className="overflow-hidden">
+          <Card  className="overflow-hidden w-[350px]">
             <div className="flex flex-row h-32 sm:h-40">
               <div className="relative w-1/3">
                 <Image

@@ -8,7 +8,6 @@ import { menuData } from "../data/data";
 
 export function MenuPage() {
   const [activeCategory, setActiveCategory] = useState(
-    menuData.categories[0].id
   );
 
   return (
