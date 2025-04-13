@@ -11,9 +11,9 @@ export function MenuCategories({ categories, activeCategory, setActiveCategory }
 
           {categories.map((category) => (
         
-        <a href={`#${category.name}`}>
+        <a href={`#${category.name}`} key={category.id}>
             <Button
-              key={category.id}
+              
               variant={activeCategory === category.id ? "default" : "outline"}
               className={`rounded-full ${
                 activeCategory === category.id

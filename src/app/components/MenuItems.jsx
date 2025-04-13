@@ -9,7 +9,7 @@ export function MenuItems({ items   , categories}) {
 
 
   return (
-    <div className="grid grid-cols-1 gap-4 py-4 px-2 h-[700px] overflow-auto translate-y-2.5 no-scrollbar ">
+    <div className="flex flex-col gap-4 py-4 px-2 h-[700px] overflow-auto translate-y-2.5 no-scrollbar ">
       {items.map((item, index) => {
 
         let divisor =null;
