@@ -13,6 +13,8 @@ export function MenuItems({ items   , categories}) {
       {items.map((item, index) => {
 
         let divisor =null;
+
+        // Logica
       
         if(
           (item.categoryId !== items[index-1]?.categoryId 
