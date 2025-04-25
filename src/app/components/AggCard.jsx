@@ -1,16 +1,16 @@
 "use client"
 
+import { useRouter } from "next/navigation"
 import { Plus } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { useAdminStore } from "@/storage/admin"
 
 export default function AggCard({category}) {
 
-    const {setIsAggProduct , setIsAggService} = useAdminStore()
+    const router = useRouter()
 
     function whatCategory(){
-      if(category==='products')setIsAggProduct(true)
-        else setIsAggService(true)
+      if(category==='products')router.push('/admin/products')
+        else router.push('/admin/services')
     }
   
   return (

@@ -7,8 +7,6 @@ import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import { useAdminStore } from "@/storage/admin";
-import { getCookie } from "cookies-next";
-import jwt from "jsonwebtoken";
 import exportComponent from "./utils/exportComponent";
 
 export default function Home() {
@@ -29,7 +27,7 @@ export default function Home() {
     AgregarService,
   } = exportComponent();
 
-  const { isAdmin, setIsAdmin, isAggProduct, isAggService } = useAdminStore();
+  const { isAdmin, setIsAdmin } = useAdminStore();
 
   const heroOpacity = useTransform(scrollY, [0, 300], [1, 0]);
   const heroScale = useTransform(scrollY, [0, 300], [1, 0.9]);
@@ -57,9 +55,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative min-h-screen bg-black text-white overflow-hidden">
-      {isAggProduct && <AgregarProducto />}
-      {isAggService && <AgregarService />}
+    <main className="relative min-h-screen bg-black text-white overflow-hidden flex flex-col items-center">
 
       {/* Hero Section */}
       <motion.div
@@ -130,6 +126,7 @@ export default function Home() {
       {/* Services Section */}
       <div
         ref={servicesRef}
+        id="sevices"
         className="py-20 px-4 md:px-8 bg-gradient-to-b from-black to-purple-950 "
       >
         <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center">
@@ -141,6 +138,7 @@ export default function Home() {
       {/* Products Section */}
       <div
         ref={productsRef}
+        id="products"
         className="py-20 px-4 md:px-8 bg-gradient-to-b from-purple-950 to-black"
       >
         <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">

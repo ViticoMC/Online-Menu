@@ -29,23 +29,6 @@ export default function ServicesSection() {
     console.log("Servicios reseteados");
   }, [resetService]);
 
-  // useEffect(() => {
-  //   const channels = supabase
-  //     .channel("custom-all-channel")
-  //     .on(
-  //       "postgres_changes",
-  //       { event: "*", schema: "public", table: "services" },
-  //       (payload) => {
-  //         console.log("Change received!", payload);
-  //         getServices().then((data) => setServices(data));
-  //       }
-  //     )
-  //     .subscribe();
-
-  //   return () => {
-  //     channels.unsubscribe();
-  //   };
-  // }, []);
 
   async function deleteService({ id }) {
     console.log(id);
@@ -56,7 +39,7 @@ export default function ServicesSection() {
 
   return (
     <section
-      className="gap-4 max-w-7xl mx-auto"
+      className="gap-4 max-w-[100vw] mx-auto"
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))",
@@ -65,7 +48,7 @@ export default function ServicesSection() {
       {services?.length > 0 ? (
         services.map((service) => (
           <Card
-            className="bg-black/50 border-pink-500/30 backdrop-blur-sm h-[500px]  flex flex-col justify-between"
+            className=" bg-black/50 border-pink-500/30 backdrop-blur-sm h-[500px]  flex flex-col justify-between"
             key={service.id}
           >
             <CardHeader>

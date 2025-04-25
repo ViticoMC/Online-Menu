@@ -31,11 +31,12 @@ export default function ProductgetProductsection() {
 
   return (
     <section
-      className="gap-4 max-w-7xl mx-auto"
+      className="gap-4  mx-auto max-w-[100vw]"
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))",
       }}
+
     >
       {products?.length > 0 ? (
         products.map((product) => (
