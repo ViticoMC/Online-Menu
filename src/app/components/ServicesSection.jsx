@@ -59,7 +59,7 @@ export default function ServicesSection() {
       className="gap-4 max-w-7xl mx-auto"
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
+        gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))",
       }}
     >
       {services?.length > 0 ? (
