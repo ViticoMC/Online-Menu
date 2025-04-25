@@ -128,3 +128,7 @@
     scrollbar-width: none; /* Firefox */
   }
 }
+body{
+  margin: 0;
+  padding: 0;
+}
