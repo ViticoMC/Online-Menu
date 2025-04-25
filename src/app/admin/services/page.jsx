@@ -102,7 +102,7 @@ export default function AgregarService() {
   };
 
   return (
-    <section>
+    <section className="h-auto min-h-screen scroll-auto">
       <Card className="w-full max-w-md bg-[#120824] border-[#2a1a3a] text-white fixed z-1000 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
         <CardHeader className="border-b border-[#2a1a3a] flex justify-between items-center">
           <CardTitle className="text-[#ff00ff]">
